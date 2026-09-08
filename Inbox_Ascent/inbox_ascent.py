@@ -198,7 +198,7 @@ Classify this email's urgency tier:
 Respond ONLY as compact JSON:
 {{"type": "Minion|Elite|Boss", "summary": "one sentence, what this email says", "action": "one sentence, what Kesean needs to do, or 'No action needed'"}}
 """
-    result = genai_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+    result = genai_client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
     data = _parse_json_response(result.text)
 
     # Hard overrides so known senders/subjects never get misclassified
@@ -222,7 +222,7 @@ Respond ONLY as compact JSON:
 {{"summary": "one sentence, what this email says", "action": "one sentence, what Kesean needs to do, or 'No action needed'", "urgent": true or false}}
 Mark urgent=true only if it needs a response today.
 """
-    result = genai_client.models.generate_content(model="gemini-2.5-flash", contents=prompt)
+    result = genai_client.models.generate_content(model="gemini-3.6-flash", contents=prompt)
     return _parse_json_response(result.text)
 
 
