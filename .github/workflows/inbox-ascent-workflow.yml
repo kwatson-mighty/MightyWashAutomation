@@ -34,9 +34,9 @@ jobs:
 
       - name: Run Inbox Ascent
         env:
-          GEMINI_API_KEY: AQ.Ab8RN6Kf5TLiq3aAW3oJXZza4pJQv8DaD_vq0-poUclri2zcUQ
-          NOTION_API_KEY: ntn_p6549216895aRzgre6Ij1EsifowG0NGzSG39XrWGpjrdWk
-          SLACK_BOT_TOKEN: xoxb-12013618196162-12042469131088-2er6EqNYZ1tWkqUL9QVZKxTb
-          FLEET_GMAIL_TOKEN_JSON: {"token": "ya29.a0AdMD6EiYRYDpW4SVZzod8WAHdke6Bg9F-3IXV9VBJ_JlQzrxORRLEOmut5r7rSjnYmXithu8p3lsdGa0mKgufbk6W1IuY_ZDiy7wpjqSehEYUjisJm5l3GFhtc_TSXoXEV-FVosBcVD2HtGbkOBR9A5USJxY8zWjh3hyRC5C1_3UI4KYlv_SaNVHrBlbx9vy2FTFfgIaCgYKAZsSARUSFQHGX2MishE_ND0ZO_ZAtus_E6KFhg0206", "refresh_token": "1//0f6V8F6firIfKCgYIARAAGA8SNwF-L9IryZVQrx19OVtDMawk16UDrQjrkJFetEgVkVZB9wTJUeKvHDPia9tFzWv-_YEfMfAXEMI", "token_uri": "https://oauth2.googleapis.com/token", "client_id": "248872763819-ll7m6boannfbidq5cc2acvjod1q03qms.apps.googleusercontent.com", "client_secret": "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", "scopes": ["https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/gmail.modify"], "universe_domain": "googleapis.com", "account": "", "expiry": "2026-09-08T20:24:00Z"}
-          PERSONAL_GMAIL_TOKEN_JSON: {"token": "ya29.a0AdMD6EhRmjRhsyxTJE0Q08tQuc-qZvFT7bo2OcCRAKiL9m_ugS9N53rfzhAVhJIQ7fafuqvSkCZPCUrRWV_uSARYdOz4_cIGboWFGPOwWrf2QfLyYobRKOwdOTJPJNJETlOW1tDjRovlpvhljujcB4QGqQ_N6HhQxw6gpj999EpDedUGd8wkIZ5GuwgkOy5wdV617PUaCgYKAesSARASFQHGX2MiRTKSQxZH88vK0U3H-JWcmw0206", "refresh_token": "1//0f4Ct4NLWdyrQCgYIARAAGA8SNwF-L9Ir4aTEoKjE3QV-gS54wOgFZA6ItaFAO_0eXdsCrW0BV9ZM2qrscvXf2PEXf19DHDHT2-E", "token_uri": "https://oauth2.googleapis.com/token", "client_id": "82105501536-mi7p1o6phgd2522c7fg1n0reelhudsv5.apps.googleusercontent.com", "client_secret": "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", "scopes": ["https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/gmail.modify"], "universe_domain": "googleapis.com", "account": "", "expiry": "2026-09-08T20:28:35Z"}
+          GEMINI_API_KEY: ${{ AQ.Ab8RN6Kf5TLiq3aAW3oJXZza4pJQv8DaD_vq0-poUclri2zcUQ }}
+          NOTION_API_KEY: ${{ ntn_p6549216895aRzgre6Ij1EsifowG0NGzSG39XrWGpjrdWk }}
+          SLACK_BOT_TOKEN: ${{ xoxb-12013618196162-12042469131088-2er6EqNYZ1tWkqUL9QVZKxTb }}
+          FLEET_GMAIL_TOKEN_JSON: ${{ secrets.FLEET_GMAIL_TOKEN_JSON }}
+          PERSONAL_GMAIL_TOKEN_JSON: ${{ secrets.PERSONAL_GMAIL_TOKEN_JSON }}
         run: python Inbox_Ascent/inbox_ascent.py
