@@ -34,9 +34,9 @@ jobs:
 
       - name: Run Inbox Ascent
         env:
-          GEMINI_API_KEY: ${{ AQ.Ab8RN6Kf5TLiq3aAW3oJXZza4pJQv8DaD_vq0-poUclri2zcUQ }}
-          NOTION_API_KEY: ${{ ntn_p6549216895aRzgre6Ij1EsifowG0NGzSG39XrWGpjrdWk }}
-          SLACK_BOT_TOKEN: ${{ xoxb-12013618196162-12042469131088-2er6EqNYZ1tWkqUL9QVZKxTb }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           FLEET_GMAIL_TOKEN_JSON: ${{ secrets.FLEET_GMAIL_TOKEN_JSON }}
           PERSONAL_GMAIL_TOKEN_JSON: ${{ secrets.PERSONAL_GMAIL_TOKEN_JSON }}
         run: python Inbox_Ascent/inbox_ascent.py
